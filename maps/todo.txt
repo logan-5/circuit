@@ -1,0 +1,3 @@
+map parser: read "defines" for different symbols with properties: different destination tiles, dependents w/ offset angles, etc
+
+dependents: add enum to show which destinations can accept them

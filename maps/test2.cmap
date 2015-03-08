@@ -1,0 +1,11 @@
+a dependent all 0 1
+b dependent all 180 1
+% tile normal false
+c modulator 1
+end_decl
+1 1 0 1 1
+1 2 b 2 1
+1 1 1 1 1
+0 1 c 1 0
+0 1 1 1 0
+0 0 a 0 0

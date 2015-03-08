@@ -1,0 +1,4 @@
+maps/test0.cmap
+maps/test2.cmap
+maps/test3.cmap
+maps/test4.cmap

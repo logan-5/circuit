@@ -1,0 +1,11 @@
+a modulator 1
+c dependent all 0 1
+b modulator 2
+d dependent all 0 2
+end_decl
+1 0 0 0 1 1 0 0 0 1
+1 1 0 0 1 1 0 0 1 1
+1 1 c 1 2 2 1 d 1 1
+1 1 a 1 1 1 1 b 1 1
+1 1 0 0 1 1 0 0 1 1
+1 0 0 0 1 1 0 0 0 1
