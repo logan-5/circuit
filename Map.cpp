@@ -19,7 +19,7 @@ Map::Map( int sizeX, int sizeY, std::string fileName, int xOffset, int yOffset )
 		printf( "Failed to open CMAP file." );
 	} else {		
 		std::string dummy;
-		while ( dummy != "end_decl" ) std::getline( stream, dummy ); // skip "header" rows
+		while ( dummy != "end_decls" ) std::getline( stream, dummy ); // skip "header" rows
 
 		while ( std::getline( stream, dummy ) ) {
 			if ( columnN == 0 ) {
@@ -57,7 +57,7 @@ std::vector<std::shared_ptr<Drawable>> Map::initFromFile( std::string fileName )
 		int rowN = 0, columnN = 0;
 		CmapParser parser( fileName, shared_from_this() );
 		_displayString = parser.displayString;
-		while ( row != "end_decl" ) std::getline( stream, row );
+		while ( row != "end_decls" ) std::getline( stream, row );
 
 		while ( std::getline( stream, row ) ) {
 			std::string tile;

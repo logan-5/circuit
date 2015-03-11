@@ -14,6 +14,7 @@ bool Movable::turnToFace( int angle = 0 ) {
 		if ( _angle == angle ) { return false; }
 		_updating = true;
 		_updatetype = UPDATE_ROTATE;
+		if ( _angle == 0 && angle == 270 ) { _angle = 360; } // correct for problems with the difference between 0 and 270
 		_rotateStepValue = INT( fmin( abs( _angle - angle ), abs( _angle - ( angle + 360 ) ) ) ) / _rotateSteps;
 		_oldAngle = _angle;
 		_angle = angle;
@@ -29,7 +30,7 @@ bool Movable::turnToFace( int angle = 0 ) {
 		//int rotAngle = ( _angle - _oldAngle + 360 )%360;
 		//int rotAngle = fmin( abs( _angle - _oldAngle ), abs( ( _oldAngle + 360 ) - _angle ) );
 		int rotAngle = _angle - _oldAngle;
-		if ( rotAngle >= 90 ) {
+		if ( rotAngle >= 90 && !( _angle == 270 && _oldAngle == 0 ) || ( _angle == 0 && _oldAngle == 270 ) ) {
 			newAngle = _oldAngle + _rotateStepValue*( ++_rotateCounter );
 		} else {
 			newAngle = _oldAngle - _rotateStepValue*( ++_rotateCounter );

@@ -15,12 +15,12 @@
 	these declarations end with a line beginning with the keyword 'end_decls'
 	any attempt to overwrite symbols 0, 1, or 2 will be ignored
 
-	as of now, only these in-game objects are supported:
-		Modulator, declares as such:
-		[symbol] modulator [code]
+	as of now, only these game objects are supported:
+		Modulator, declared as such:
+		[symbol] modulator [group]
 
 		Dependent, declared as such:
-		[symbol] dependent [type ( corresponding to Dependent::type_e )] [angle offset from modulator] [code]
+		[symbol] dependent [type ( corresponding to Dependent::type_e )] [angle offset from modulator] [mod group]
 
 		Tile, declared as such:
 		[symbol] tile [type ( corresponding to Tile::type_e )] [blocked ( true/false )]
@@ -29,7 +29,7 @@
 		string [string to be displayed]
 
 	You may then use these symbols in the map representation to refer to the specified object.
-	NOTE: all Dependents are placed with a NORMAL tile under them.
+	NOTE: all Dependents and Modulators are placed with a NORMAL tile under them.
 
 	Example CMAP file:
 		d dependent all 0
