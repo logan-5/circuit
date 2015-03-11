@@ -2,7 +2,7 @@ a dependent all 0 1
 b dependent all 180 1
 % dependent all 90 1
 c modulator 1
-end_decl
+end_decls
 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 c 1 1 1 1 0 0 % 0 0 c 0
 0 0 0 0 0 0 0 0 1 0 0 1 0

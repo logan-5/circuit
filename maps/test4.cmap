@@ -3,7 +3,7 @@ b dependent all 180 group1
 % dependent all 90 group2
 c modulator group1
 d modulator group2
-end_decl
+end_decls
 0 0 2 1 0 0 0 1 1 1
 0 1 b a 1 0 0 1 c 2
 0 1 d 1 1 0 0 1 1 1
